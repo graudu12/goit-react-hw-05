@@ -1,0 +1,12 @@
+.app {
+  font-family: 'Encode Sans Expanded', sans-serif;
+
+  padding-bottom: 50px;
+}
+
+h1,
+h2,
+p,
+ul {
+  color: black;
+}
