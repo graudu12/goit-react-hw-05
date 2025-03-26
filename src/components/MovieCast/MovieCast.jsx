@@ -1,10 +1,10 @@
-import { useParams } from "react-router-dom";
-import { useState, useEffect } from "react";
-import ErrorMessage from "../ErrorMessage/ErrorMessage";
-import Loading from "../Loading/Loading";
-import { getMovieCredits } from "../Api/movieApi";
-import { DEFAULT_IMG } from "../../defaultImg";
-import css from "../MovieCast/MovieCast.module.css";
+import { useParams } from 'react-router-dom';
+import { useState, useEffect } from 'react';
+import ErrorMessage from '../ErrorMessage/ErrorMessage';
+import Loading from '../Loading/Loading';
+import { getMovieCredits } from '../Api/movieApi';
+import { DEFAULT_IMG } from '../../defaultImg';
+import css from '../MovieCast/MovieCast.module.css';
 
 export default function MovieCast() {
   const { movieId } = useParams();
@@ -50,8 +50,10 @@ export default function MovieCast() {
                 alt={actor.name}
               />
               <h2 className={css.name}>{actor.name}</h2>
-              <p>{actor.character && <p>Character: {actor.character}</p>}
-           </p> </li>
+              <p>
+                {actor.character && <h4>Character: {actor.character}</h4>}
+              </p>{' '}
+            </li>
           ))}
         </ul>
       )}
